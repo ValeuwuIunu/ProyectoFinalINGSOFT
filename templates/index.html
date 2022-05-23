@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}
+    {{ super() }}
+    Index
+{% endblock title %}
+{% block content %}
+    {{ super() }}
+    <h1 class="titulo">¡Bienvenido a su banco de confianza!</h1>
+    </br></br></br></br></br>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <a class="btn btnIngreso" href="/ingresar">Ahorros</a>
+            </div>
+            <div class="col-sm">
+                <a class="btn btnIngreso" href="/ingresar">Diamante</a>
+            </div>
+            <div class="col-sm">
+                <a class="btn btnIngreso" href="/ingresar">Corriente</a>
+            </div>
+        </div>
+    </div>
+{% endblock content%}

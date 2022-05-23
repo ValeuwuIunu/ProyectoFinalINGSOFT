@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %}
+    {{ super() }}
+    Index
+{% endblock title %}
+{% block content %}
+    {{ super() }}
+    <h4 class="text-center title">{{message}}</h1>
+    <h2 class="subtitulo">¡Ingrese a su constraseña!</h1>
+        </br></br></br>
+        <div class="card text-center" style="width: 35%; margin: auto">
+            <form action="/login" method="post">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  <label> Contraseña </label>
+                </br>
+                  {% if tipo == consultas %}
+                    <input type="hidden" value= "consultas" name="tipo">
+                  {% else if tipo == retiros %}
+                    <input type="hidden" value= "retiros" name="tipo">
+                  {% else if tipo == transferencias %}
+                    <input type="hidden" value= "transferencias" name="tipo">
+                  {% endif %}
+                  <input
+                    style="text-align: center"
+                    id="pass"
+                    type="text"
+                    name="pass"
+                    class="entrada"
+                    placeholder="Digite su contraseña"
+                    required
+                  />
+                </li>
+              </ul>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  <button class="btn btn-success" type="submit">
+                    Ingresar
+                  </button>
+                </li>
+              </ul>
+        </form>
+    </div>
+{% endblock content%}

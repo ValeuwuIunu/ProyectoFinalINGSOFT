@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}
+    {{ super() }}
+    Index
+{% endblock title %}
+{% block content %}
+    {{ super() }}
+    <div class="rectangulo">
+        <h1 class="titulo2">Seleccionar proceso</h1>
+    </div>
+    </br></br></br></br></br>
+    <div class="container">
+        <div class="row">
+            <form action="/ingresarContra" method = "post">
+                <input type="hidden" value="consultas" name="tipo">
+                <button class="btn btnIngreso" type="submit">
+                    Consultas
+                </button>
+            </form>
+            <form action="/ingresarContra" method = "post">
+                <input type="hidden" value="retiros" name="tipo">
+                <button class="btn btnIngreso" type="submit">
+                    Retiros
+                </button>
+            </form>
+            <form action="/ingresarContra" method = "post">
+                <input type="hidden" value="transferencias" name="tipo">
+                <button class="btn btnIngreso" type="submit">
+                    Transferencias
+                </button>
+            </form>
+        </div>
+    </div>
+{% endblock content%}
