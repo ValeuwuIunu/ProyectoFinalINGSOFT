@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}
+    {{ super() }}
+    Transferencias
+{% endblock title %}
+{% block content %}
+    {{ super() }}
+    <h4 class="text-center title">{{message}}</h1>
+    <h1 class="titulo">Transferencias</h1>
+    </br></br></br>
+    <h2 class="subtitulo">Digite el numero de cuenta a la cual va a hacer la transferencia</h2>
+    <div class="container">
+        <div class="bloqueTransaccion">
+            <form action="/buscarCuenta" method="post">
+                <input type="text" name="cuenta" placeholder="Ingresa el ID de la cuenta">
+                <button class="btn btnRetiro" type="submit">Buscar cuenta</button>
+            </form>
+        </div>
+    </div>
+{% endblock content%}

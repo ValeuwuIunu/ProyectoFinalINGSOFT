@@ -63,7 +63,7 @@ div.rectangulo{
 
 h1.titulo2{
     padding: 65px 32px;
-    font-size: 100px;
+    font-size: 68px;
     color: white;
     text-transform: uppercase;
     text-align: center;
@@ -83,4 +83,60 @@ input.entrada{
     color:#0b0e1a;
     width: 70%;
     height: 15%;
+}
+
+div.fondo{
+    background-color: #0aa80c;
+    color: white;
+}
+
+p.texto{
+    text-align: center;
+    font-weight: bold;
+    font-size: 45px;
+}
+
+div.bloqueTransaccion{
+    margin:1rem;
+    padding:1rem;
+    height: 50%;
+    width: 100%;
+    background-color: #0aa80c;
+    border-radius: 15px;
+    text-align: center;
+    overflow:hidden;
+}
+
+button.btnRetiro{
+    text-align: center;
+    color: WHITE;
+    font-weight: bold;
+    background-color: #EB5C00;
+    height: 35%;
+    width: 50%;
+    margin: 25% 25% 25% 25%;
+    padding-top: 10%;
+}
+
+a.btnRetiro{
+    text-align: center;
+    color: WHITE;
+    font-weight: bold;
+    height: 35%;
+    width: 50%;
+    background-color: #EB5C00;
+    margin: 25% 25% 25% 25%;
+    padding-top: 10%;
+}
+
+p.pRecibo{
+    color:white;
+    font-size: 35px;
+}
+
+h3.subtitulo{
+    font-size: 36px;
+    color: black;
+    text-align: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 }

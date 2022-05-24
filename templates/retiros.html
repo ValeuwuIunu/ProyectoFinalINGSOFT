@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block title %}
+{{ super() }}
+Retiros
+{% endblock title %}
+{% block content %}
+{{ super() }}
+<h4 class="text-center title">{{message}}</h1>
+    <h1 class="titulo">Retiros</h1>
+    </br></br></br>
+    <h2 class="subtitulo">Selecccione la cantidad a retirar</h2>
+    <div class="container">
+        <!---->
+        <div class="bloqueTransaccion">
+            <div class="row">
+                <div class="col">
+                    <form action="/retirar" method="post">
+                        <input type="hidden" name="valor" value="20000">
+                        <button class="btn btnRetiro" type="submit">$ 20.000</button>
+                    </form>
+                </div>
+                <div class="col">
+                    <form action="/retirar" method="post">
+                        <input type="hidden" name="valor" value="50000">
+                        <button class="btn btnRetiro" type="submit">$ 50.000</button>
+                    </form>
+                </div>
+                <div class="col">
+                    <form action="/retirar" method="post">
+                        <input type="hidden" name="valor" value="100000">
+                        <button class="btn btnRetiro" type="submit">$ 100.000</button>
+                    </form>
+                </div>
+                <div class="col">
+                    <form action="/retirar" method="post">
+                        <input type="hidden" name="valor" value="200000">
+                        <button class="btn btnRetiro" type="submit">$ 200.000</button>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <form action="/retirar" method="post">
+                        <input type="hidden" name="valor" value="300000">
+                        <button class="btn btnRetiro" type="submit">$ 300.000</button>
+                    </form>
+                </div>
+                <div class="col">
+                    <form action="/retirar" method="post">
+                        <input type="hidden" name="valor" value="500000">
+                        <button class="btn btnRetiro" type="submit">$ 500.000</button>
+                    </form>
+                </div>
+                <div class="col">
+                    <form action="/retirar" method="post">
+                        <input type="hidden" name="valor" value="1000000">
+                        <button class="btn btnRetiro" type="submit">$ 1'000.000</button>
+                    </form>
+                </div>
+                <div class="col"><a href="/cantidadRetiro" class="btn btnRetiro">Otro valor</a></div>
+            </div>
+        </div>
+    </div>
+    </div>
+    {% endblock content%}

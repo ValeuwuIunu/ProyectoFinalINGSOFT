@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}
+    {{ super() }}
+    Consultas
+{% endblock title %}
+{% block content %}
+    {{ super() }}
+    <h4 class="text-center title">{{message}}</h1>
+    <h1 class="titulo">Consulte su saldo actual</h1>
+    </br></br></br></br></br>
+    <div class="container fondo">
+        <div class="row">
+            <div class="col"><p class="texto">{{messageSaldo}}</p></div>
+        </div>
+    </div>
+{% endblock content%}

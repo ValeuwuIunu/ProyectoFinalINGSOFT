@@ -1,34 +1,36 @@
 {% extends "base.html" %}
 {% block title %}
     {{ super() }}
-    Login
+    Index
 {% endblock title %}
 {% block content %}
     {{ super() }}
     <h4 class="text-center title">{{message}}</h1>
-    <h2 class="subtitulo">¡Ingrese a su cuenta!</h1>
+    <h2 class="subtitulo">Retirar</h1>
         </br></br></br>
+        <h3 class="subtitulo"></h3>
         <div class="card text-center" style="width: 35%; margin: auto">
-            <form action="/login" method="post">
+            <form action="/retirarCantidadDinero" method="post">
               <ul class="list-group list-group-flush">
                 <li class="list-group-item">
-                  <label> CVV </label>
+                  <label> Digita la cantidad a retirar </label>
                 </br>
                   <input
                     style="text-align: center"
-                    id="cvv"
+                    id="valor"
                     type="text"
-                    name="cvv"
+                    name="valor"
                     class="entrada"
-                    placeholder="Digite los 3 numeros que se encuentran en la parte posterior de su tarjeta"
+                    placeholder="Cantidad"
                     required
                   />
                 </li>
               </ul>
+              <small id="emailHelp" class="form-text text-muted">Recuerda retirar cantidades superiores a 20000 e inferiores a 2'700.000</small>
               <ul class="list-group list-group-flush">
                 <li class="list-group-item">
                   <button class="btn btn-success" type="submit">
-                    Ingresar
+                    Retirar
                   </button>
                 </li>
               </ul>

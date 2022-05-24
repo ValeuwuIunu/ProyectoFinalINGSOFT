@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}
+{{ super() }}
+Recibo
+{% endblock title %}
+{% block content %}
+{{ super() }}
+<h4 class="text-center title">{{message}}</h1>
+    <h1 class="titulo">Recibo</h1>
+    <div class="container">
+        <div class="bloqueTransaccion">
+            <h2 class="subtitulo">Banco Popular</h2>
+            <p class="pRecibo">Fecha y hora: <b>{{transaccion[1]}}</b> a las <b>{{transaccion[2]}}</b> </p>   
+            <p class="pRecibo">Transaccion numero: <b>{{transaccion[0]}}</b></p>
+            <p class="pRecibo">Transaccion realizada por: <b>{{tarjeta['username']}}</b> con la tarjeta <b>{{tarjeta['id_tarjeta']}}</b></p>
+            <p class="pRecibo">Valor retirado: <b>$ {{valor}}</b></p>
+            <p class="pRecibo">Saldo actual: <b>$ {{nuevo_saldo}}</b></p>
+        </div>
+    </div>
+{% endblock content%}

@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block title %}
     {{ super() }}
-    Index
+    Proceso
 {% endblock title %}
 {% block content %}
     {{ super() }}
@@ -11,24 +11,30 @@
     </br></br></br></br></br>
     <div class="container">
         <div class="row">
-            <form action="/ingresarContra" method = "post">
-                <input type="hidden" value="consultas" name="tipo">
-                <button class="btn btnIngreso" type="submit">
-                    Consultas
-                </button>
-            </form>
-            <form action="/ingresarContra" method = "post">
-                <input type="hidden" value="retiros" name="tipo">
-                <button class="btn btnIngreso" type="submit">
-                    Retiros
-                </button>
-            </form>
-            <form action="/ingresarContra" method = "post">
-                <input type="hidden" value="transferencias" name="tipo">
-                <button class="btn btnIngreso" type="submit">
-                    Transferencias
-                </button>
-            </form>
+            <div class="col-sm">
+                <form action="/ingresarContra" method = "post">
+                    <input type="hidden" value="consultas" name="tipo">
+                    <button class="btn btnIngreso" type="submit">
+                        Consultas
+                    </button>
+                </form>
+            </div>
+            <div class="col-sm">
+                <form action="/ingresarContra" method = "post">
+                    <input type="hidden" value="retiros" name="tipo">
+                    <button class="btn btnIngreso" type="submit">
+                        Retiros
+                    </button>
+                </form>
+            </div>
+            <div class="col-sm">
+                <form action="/ingresarContra" method = "post">
+                    <input type="hidden" value="transferencias" name="tipo">
+                    <button class="btn btnIngreso" type="submit">
+                        Transferencias
+                    </button>
+                </form>
+            </div>
         </div>
     </div>
 {% endblock content%}

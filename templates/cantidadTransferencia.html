@@ -1,26 +1,30 @@
 {% extends "base.html" %}
 {% block title %}
     {{ super() }}
-    Login
+    Index
 {% endblock title %}
 {% block content %}
     {{ super() }}
     <h4 class="text-center title">{{message}}</h1>
-    <h2 class="subtitulo">¡Ingrese a su cuenta!</h1>
+    <h2 class="subtitulo"> Transferencia </h1>
         </br></br></br>
+        <h3 class="subtitulo">Se va a transferir a la cuenta: <b>{{tarjeta_transferencia['id_tarjeta']}}</b> que pertenece al usuario <b>{{tarjeta_transferencia['username']}}</b></h3>  
         <div class="card text-center" style="width: 35%; margin: auto">
-            <form action="/login" method="post">
+            <form action="/transferirDinero" method="post">
               <ul class="list-group list-group-flush">
                 <li class="list-group-item">
-                  <label> CVV </label>
+                  <label> Digita la cantidad a transferir </label>
                 </br>
+                <input type="hidden" value="{{tarjeta_transferencia['id_tarjeta']}}" name="tarjeta">
+                <input type="hidden" value="{{tarjeta_transferencia['username']}}" name="usuario">
+                <input type="hidden" value="{{tarjeta_transferencia['id_cuenta']}}" name="cuenta">
                   <input
                     style="text-align: center"
-                    id="cvv"
+                    id="valor"
                     type="text"
-                    name="cvv"
+                    name="valor"
                     class="entrada"
-                    placeholder="Digite los 3 numeros que se encuentran en la parte posterior de su tarjeta"
+                    placeholder="Cantidad"
                     required
                   />
                 </li>
@@ -28,7 +32,7 @@
               <ul class="list-group list-group-flush">
                 <li class="list-group-item">
                   <button class="btn btn-success" type="submit">
-                    Ingresar
+                    Transferir
                   </button>
                 </li>
               </ul>
